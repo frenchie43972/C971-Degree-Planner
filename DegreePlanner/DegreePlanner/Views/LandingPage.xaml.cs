@@ -16,5 +16,10 @@ namespace DegreePlanner.Views
 		{
 			InitializeComponent();
 		}
+
+		async void AddTerm_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new TermAdd());
+		}
 	}
 }

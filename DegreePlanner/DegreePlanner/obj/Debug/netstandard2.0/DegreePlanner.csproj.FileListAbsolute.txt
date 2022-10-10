@@ -12,3 +12,5 @@ C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netst
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\ref\DegreePlanner.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.pdb
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.AssemblyReference.cache
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\TermAdd.xaml.g.cs
