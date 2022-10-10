@@ -17,6 +17,20 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
-		
+		private void TermStartDate_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
+		}
+
+		private void TermEndDate_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
+		}
+
+		private void SaveButton_Clicked(object sender, EventArgs e)
+		{
+
+		}
+
 	}
 }

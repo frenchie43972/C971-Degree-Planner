@@ -1,15 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DegreePlanner.Views.TermAdd">
-
-	
+             x:Class="DegreePlanner.Views.TermAdd"
+			 Title="Add Term">
 	
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Add Term"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            <Label Text="Term Name" 
+				   FontSize="Title"
+				   Margin="10,0,10,0"/>
+			<Editor Placeholder="Enter a Term Name"
+					x:Name="TermName"
+					Text="{Binding TermTitle}"
+					Margin="10,0,10,0" />
+			<Grid Padding="0,0,0,25">
+				<Label Text="Start Date"
+					   FontSize="Medium"
+					   Grid.Column="0"
+					   Grid.Row="0"
+					   VerticalTextAlignment="Center"
+					   HorizontalTextAlignment="Center"/>
+				<DatePicker x:Name="TermStartDate"
+							DateSelected="TermStartDate_DateSelected"	
+							Grid.Column="1"
+							Grid.Row="0"
+							Margin="0,0,15,0"/>
+				<Label Text="End Date"
+					   FontSize="Medium"
+					   Grid.Column="0"
+					   Grid.Row="1"
+					   VerticalTextAlignment="Center"
+					   HorizontalTextAlignment="Center"/>
+				<DatePicker x:Name="TermEndDate"
+							DateSelected="TermEndDate_DateSelected"		
+							Grid.Column="1"
+							Grid.Row="1"
+							Margin="0,0,15,0"/>
+			</Grid>
+			<Button Text="Save"
+					Margin="90,0,90,0"
+					Padding="20"
+					BackgroundColor="#607EAA"
+					Clicked="SaveButton_Clicked"/>
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
