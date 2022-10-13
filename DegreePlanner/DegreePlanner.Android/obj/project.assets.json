@@ -2218,26 +2218,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\frenc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\Kris\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code Projects\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\DegreePlanner.Android.csproj",
+      "projectUniqueName": "D:\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\DegreePlanner.Android.csproj",
       "projectName": "DegreePlanner.Android",
-      "projectPath": "C:\\Code Projects\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\DegreePlanner.Android.csproj",
-      "packagesPath": "C:\\Users\\frenc\\.nuget\\packages\\",
-      "outputPath": "C:\\Code Projects\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\obj\\",
+      "projectPath": "D:\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\DegreePlanner.Android.csproj",
+      "packagesPath": "C:\\Users\\Kris\\.nuget\\packages\\",
+      "outputPath": "D:\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\frenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -2252,8 +2252,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Code Projects\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner\\DegreePlanner.csproj": {
-              "projectPath": "C:\\Code Projects\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner\\DegreePlanner.csproj"
+            "D:\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner\\DegreePlanner.csproj": {
+              "projectPath": "D:\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner\\DegreePlanner.csproj"
             }
           }
         }

@@ -4,7 +4,7 @@
              x:Class="DegreePlanner.Views.LandingPage">
 
 	<ContentPage.ToolbarItems>
-		<ToolbarItem x:Name="AddTerm" Text="Add Term" Clicked="AddTerm_Clicked"></ToolbarItem> 
+		<ToolbarItem x:Name="Terms" Text="Terms" Clicked="Terms_Clicked"></ToolbarItem>    
 	</ContentPage.ToolbarItems>
 	
     <ContentPage.Content>

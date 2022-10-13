@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DegreePlanner.Views.TermPage"
+			 Title="Term List">
+	
+	<ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="AddTerm" Text="Add Term" Clicked="AddTerm_Clicked"></ToolbarItem>
+	</ContentPage.ToolbarItems>
+
+	<CollectionView x:Name="TermCollectionView"
+						ItemsSource="{Binding Terms}"
+						EmptyView="No Terms to Display"
+						SelectionMode="Single">
+		<CollectionView.ItemsLayout>
+			<LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+		</CollectionView.ItemsLayout>
+
+		<CollectionView.ItemTemplate>
+			<DataTemplate>
+				<StackLayout>
+					<Grid Padding="5" ColumnSpacing="22" RowSpacing="1" BackgroundColor="WhiteSmoke">
+
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+
+						<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Name</Label>
+						<Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+						<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Start Date</Label>
+						<Label Text="{Binding TermStartDate}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+						<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">End Date</Label>
+						<Label Text="{Binding TermEndDate}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
+
+					</Grid>
+				</StackLayout>
+			</DataTemplate>
+		</CollectionView.ItemTemplate>
+	</CollectionView>
+	
+</ContentPage>
