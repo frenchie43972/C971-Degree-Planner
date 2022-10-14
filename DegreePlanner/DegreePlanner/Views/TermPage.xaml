@@ -11,7 +11,8 @@
 	<CollectionView x:Name="TermCollectionView"
 						ItemsSource="{Binding Terms}"
 						EmptyView="No Terms to Display"
-						SelectionMode="Single">
+						SelectionMode="Single"
+						SelectionChanged="TermCollectionView_SelectionChanged">
 		<CollectionView.ItemsLayout>
 			<LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
 		</CollectionView.ItemsLayout>
@@ -33,13 +34,13 @@
 						</Grid.ColumnDefinitions>
 
 						<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Name</Label>
-						<Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
+						<Label Text="{Binding TermName}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
 
 						<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Start Date</Label>
-						<Label Text="{Binding TermStartDate}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
+						<Label Text="{Binding TermStart}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
 
 						<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">End Date</Label>
-						<Label Text="{Binding TermEndDate}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
+						<Label Text="{Binding TermEnd}" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
 
 					</Grid>
 				</StackLayout>

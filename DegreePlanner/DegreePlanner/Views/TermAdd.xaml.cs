@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DegreePlanner.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,10 +29,15 @@ namespace DegreePlanner.Views
 
 		}
 
-		private void SaveButton_Clicked(object sender, EventArgs e)
+		async void SaveTerm_Clicked(object sender, EventArgs e)
 		{
-
+			await DatabaseServices.AddTerm(TermName.Text, TermStartDate.Date, TermEndDate.Date);
+			await Navigation.PopAsync();
 		}
 
+		async void CancelTerm_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PopAsync();
+		}
 	}
 }
