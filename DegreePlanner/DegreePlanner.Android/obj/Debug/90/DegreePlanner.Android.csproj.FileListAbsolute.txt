@@ -499,15 +499,6 @@ C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Deb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.Android.dll
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.Android.pdb
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner.apk
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner.aab
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.aab
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.apk
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.apk.idsig
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.dll
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.pdb
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\build.props
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\adb.props
@@ -530,6 +521,15 @@ D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\lp\41\jl
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\R.txt
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\R.cs.flag
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.csproj.CoreCompileInputs.cache
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.Android.dll
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.Android.pdb
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner.apk
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner.aab
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.aab
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.apk
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.apk.idsig
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.dll
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.pdb
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\XamlC.stamp
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.csproj.CopyComplete
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.dll

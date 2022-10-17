@@ -34,10 +34,10 @@
 				<Entry Text="{Binding Name}" x:Name="TermName" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"></Entry>
 
 				<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Start Date</Label>
-				<Entry Text="{Binding Start}" x:Name="TermStart" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"></Entry>
+				<DatePicker DateSelected="TermStart_DateSelected" x:Name="TermStart" Grid.Row="2" Grid.Column="1" />
 
 				<Label Grid.Row="3" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">End Date</Label>
-				<Entry Text="{Binding End}" x:Name="TermEnd" Grid.Row="3" Grid.Column="1" VerticalTextAlignment="Center"></Entry>
+				<DatePicker DateSelected="TermEnd_DateSelected" x:Name="TermEnd" Grid.Row="3" Grid.Column="1"/>
 			</Grid>
 			
         </StackLayout>

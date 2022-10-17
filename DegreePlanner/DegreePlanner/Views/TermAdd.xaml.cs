@@ -19,6 +19,32 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
+		async void SaveTerm_Clicked(object sender, EventArgs e)
+		{
+			if (TermName.Text == null)
+			{
+				await DisplayAlert("Error!", "You must create a Term name", "Ok");
+
+				return;
+			}
+			if (TermStartDate.Date >= TermEndDate.Date)
+			{
+				await DisplayAlert("Error!", "Start date cannot be greater than end date", "Ok");
+
+				return;
+			}
+			else
+			{
+				await DatabaseServices.AddTerm(TermName.Text, TermStartDate.Date, TermEndDate.Date);
+				await Navigation.PopAsync();
+			}
+		}
+
+		async void CancelTerm_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PopAsync();
+		}
+
 		private void TermStartDate_DateSelected(object sender, DateChangedEventArgs e)
 		{
 
@@ -27,17 +53,6 @@ namespace DegreePlanner.Views
 		private void TermEndDate_DateSelected(object sender, DateChangedEventArgs e)
 		{
 
-		}
-
-		async void SaveTerm_Clicked(object sender, EventArgs e)
-		{
-			await DatabaseServices.AddTerm(TermName.Text, TermStartDate.Date, TermEndDate.Date);
-			await Navigation.PopAsync();
-		}
-
-		async void CancelTerm_Clicked(object sender, EventArgs e)
-		{
-			await Navigation.PopAsync();
 		}
 	}
 }

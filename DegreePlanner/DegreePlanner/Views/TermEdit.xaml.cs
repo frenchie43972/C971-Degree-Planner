@@ -19,15 +19,33 @@ namespace DegreePlanner.Views
 
 			TermId.Text = selectedTerm.Id.ToString();
 			TermName.Text = selectedTerm.TermName.ToString();
-			TermStart.Text = selectedTerm.TermStart.ToString();
-			TermEnd.Text = selectedTerm.TermEnd.ToString();
+			TermStart.Date = selectedTerm.TermStart.Date;
+			TermEnd.Date = selectedTerm.TermEnd.Date;
 		}
 
 		async void SaveTerm_Clicked(object sender, EventArgs e)
 		{
-			await DatabaseServices.UpdateTerm(Int32.Parse(TermId.Text), TermName.Text, DateTime.Parse(TermStart.Text), DateTime.Parse(TermEnd.Text));
+			if (TermName.Text == null)
+			{
+				await DisplayAlert("Error!", "Term name cannot be empty", "Ok");
 
-			await Navigation.PopAsync();
+				return;
+			}
+			if (TermStart.Date >= TermEnd.Date)
+			{
+				await DisplayAlert("Error!", "Start date cannot be greater than end date", "Ok");
+
+				return;
+			}
+			else
+			{
+				await DatabaseServices.UpdateTerm(Int32.Parse(TermId.Text), TermName.Text,
+											DateTime.Parse(TermStart.Date.ToString()),
+											DateTime.Parse(TermEnd.Date.ToString()));
+
+				await Navigation.PopAsync();
+			}
+
 		}
 
 		async void CancelTerm_Clicked(object sender, EventArgs e)
@@ -39,8 +57,28 @@ namespace DegreePlanner.Views
 		{
 			var id = int.Parse(TermId.Text);
 
-			await DatabaseServices.RemoveTerm(id);
-			await Navigation.PopAsync();
+			var confirmDelete = await DisplayAlert("Confirm", "Are you sure you wnat to delete this record?", "Ok", "Cancel");
+
+			if (confirmDelete == true)
+			{
+				await DatabaseServices.RemoveTerm(id);
+				await Navigation.PopAsync();
+			}
+			else
+			{
+				return;
+			}
+			
+		}
+
+		private void TermStart_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
+		}
+
+		private void TermEnd_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
 		}
 	}
 }
