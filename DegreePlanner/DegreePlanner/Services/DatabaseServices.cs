@@ -79,7 +79,7 @@ namespace DegreePlanner.Services
 		}
 		#endregion
 
-		#region
+		#region Course Methods
 
 		public static async Task AddCourse(int termId, string courseName, string courseStatus,
 					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,

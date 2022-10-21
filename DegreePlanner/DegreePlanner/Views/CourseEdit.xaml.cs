@@ -16,5 +16,20 @@ namespace DegreePlanner.Views
 		{
 			InitializeComponent();
 		}
+
+		private void SaveCourse_Clicked(object sender, EventArgs e)
+		{
+
+		}
+
+		private void CancelCourse_Clicked(object sender, EventArgs e)
+		{
+
+		}
+
+		private void DeleteCourse_Clicked(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

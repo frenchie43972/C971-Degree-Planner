@@ -16,5 +16,15 @@ namespace DegreePlanner.Views
 		{
 			InitializeComponent();
 		}
+
+		private void SaveCourse_Clicked(object sender, EventArgs e)
+		{
+
+		}
+
+		async void CancelCourse_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PopAsync();
+		}
 	}
 }

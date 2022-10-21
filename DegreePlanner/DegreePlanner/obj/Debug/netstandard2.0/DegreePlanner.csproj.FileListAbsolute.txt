@@ -32,3 +32,6 @@ D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Xaml
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.dll
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\ref\DegreePlanner.dll
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.pdb
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseAdd.xaml.g.cs
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseEdit.xaml.g.cs
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CoursePage.xaml.g.cs

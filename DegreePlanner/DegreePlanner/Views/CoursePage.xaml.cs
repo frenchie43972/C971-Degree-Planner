@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DegreePlanner.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,20 @@ namespace DegreePlanner.Views
 		public CoursePage()
 		{
 			InitializeComponent();
+		}
+
+		async void AddCourse_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new CourseAdd());
+		}
+
+		async void CourseCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			//if (e.CurrentSelection != null)
+			//{
+			//	Course course = (Course)e.CurrentSelection.FirstOrDefault();
+			//	await Navigation.PushAsync(new CourseEdit(course));
+			//}
 		}
 	}
 }
