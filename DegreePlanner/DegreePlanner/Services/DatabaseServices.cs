@@ -79,5 +79,82 @@ namespace DegreePlanner.Services
 		}
 		#endregion
 
+		#region
+
+		public static async Task AddCourse(int termId, string courseName, string courseStatus,
+					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
+					string instPhone, string notes, bool notifications)
+		{
+			await Init();
+			var course = new Course
+			{
+				TermId = termId,
+				CourseName = courseName,
+				CourseStatus = courseStatus,
+				CourseStart = courseStart,
+				CourseEnd = courseEnd,
+				InstName = instName,
+				InstEmail = instEmail,
+				InstPhone = instPhone,
+				Notes = notes,
+				Notification = notifications,
+			};
+
+			await _db.InsertAsync(course);
+
+			var id = course.Id;
+		}
+
+		public static async Task RemoveCourse(int id)
+		{
+			await Init();
+
+			await _db.DeleteAsync<Course>(id);
+		}
+
+		public static async Task<IEnumerable<Course>> GetCourse(int termId)
+		{
+			await Init();
+
+			var courses = await _db.Table<Course>().Where(i => i.TermId == termId).ToListAsync();
+
+			return courses;
+		}
+
+		public static async Task<IEnumerable<Course>> GetCourse()
+		{
+			await Init();
+
+			var courses = await _db.Table<Course>().ToListAsync();
+
+			return courses;
+		}
+
+		public static async Task UpdateCourse(int id, string courseName, string courseStatus,
+					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
+					string instPhone, string notes, bool notifications)
+		{
+			await Init();
+
+			var courseQuery = await _db.Table<Course>()
+				.Where(i => i.Id == id)
+				.FirstOrDefaultAsync();
+
+			if (courseQuery != null)
+			{
+				courseQuery.CourseName = courseName;
+				courseQuery.CourseStatus = courseStatus;
+				courseQuery.CourseStart = courseStart;
+				courseQuery.CourseEnd = courseEnd;
+				courseQuery.InstName = instName;
+				courseQuery.InstEmail = instEmail;
+				courseQuery.InstPhone = instPhone;
+				courseQuery.Notes = notes;
+				courseQuery.Notification = notifications;
+			}
+		}
+
+		#endregion
+
 	}
 }
