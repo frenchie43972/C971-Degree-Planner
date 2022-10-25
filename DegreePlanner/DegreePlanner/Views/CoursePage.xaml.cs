@@ -31,5 +31,10 @@ namespace DegreePlanner.Views
 			//	await Navigation.PushAsync(new CourseEdit(course));
 			//}
 		}
+
+		async void EditCourse_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new CourseEdit());
+		}
 	}
 }

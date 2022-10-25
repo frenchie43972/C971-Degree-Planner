@@ -14,9 +14,16 @@ C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netst
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.pdb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.AssemblyReference.cache
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\TermAdd.xaml.g.cs
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.AssemblyReference.cache
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.GeneratedMSBuildEditorConfig.editorconfig
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\DegreePlanner.deps.json
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\DegreePlanner.dll
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\ref\DegreePlanner.dll
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\DegreePlanner.pdb
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.AssemblyReference.cache
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseAdd.xaml.g.cs
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseEdit.xaml.g.cs
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CoursePage.xaml.g.cs
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\LandingPage.xaml.g.cs
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\TermAdd.xaml.g.cs
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\TermEdit.xaml.g.cs
@@ -24,14 +31,7 @@ D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\View
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.AssemblyInfoInputs.cache
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.AssemblyInfo.cs
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.CoreCompileInputs.cache
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\DegreePlanner.deps.json
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\DegreePlanner.dll
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\ref\DegreePlanner.dll
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\bin\Debug\netstandard2.0\DegreePlanner.pdb
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\XamlC.stamp
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.dll
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\ref\DegreePlanner.dll
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.pdb
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseAdd.xaml.g.cs
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseEdit.xaml.g.cs
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CoursePage.xaml.g.cs

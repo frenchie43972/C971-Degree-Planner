@@ -502,7 +502,6 @@ C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Deb
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\build.props
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\adb.props
-D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.csproj.AssemblyReference.cache
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\res.flag
@@ -530,6 +529,7 @@ D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.company
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner-Signed.apk.idsig
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.dll
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.pdb
+D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.csproj.AssemblyReference.cache
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\XamlC.stamp
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.csproj.CopyComplete
 D:\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\DegreePlanner.Android.dll

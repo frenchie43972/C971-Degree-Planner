@@ -28,7 +28,7 @@
 				
 				<!-- Add Placeholder Text if Necessary -->
 				<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">ID</Label>
-				<Entry Text="{Binding Id}" x:Name="TermId" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"></Entry>
+				<Entry Text="{Binding Id}" x:Name="TermId" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" IsReadOnly="True"></Entry>
 
 				<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Term Name</Label>
 				<Entry Text="{Binding Name}" x:Name="TermName" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"></Entry>

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,12 +21,22 @@ namespace DegreePlanner.Views
 
 		}
 
-		private void CancelCourse_Clicked(object sender, EventArgs e)
+		async void CancelCourse_Clicked(object sender, EventArgs e)
+		{
+			//await Init();
+		}
+
+		private void DeleteCourse_Clicked(object sender, EventArgs e)
 		{
 
 		}
 
-		private void DeleteCourse_Clicked(object sender, EventArgs e)
+		private void CourseStart_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
+		}
+
+		private void CourseEnd_DateSelected(object sender, DateChangedEventArgs e)
 		{
 
 		}

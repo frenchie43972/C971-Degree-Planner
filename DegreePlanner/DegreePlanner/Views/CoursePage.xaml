@@ -6,6 +6,7 @@
 
 	<ContentPage.ToolbarItems>
 		<ToolbarItem x:Name="AddCourse" Text="Add Course" Clicked="AddCourse_Clicked"></ToolbarItem>
+		<ToolbarItem x:Name="EditCourse" Text="Edit Course" Clicked="EditCourse_Clicked"></ToolbarItem>
 	</ContentPage.ToolbarItems>
 
 	<CollectionView x:Name="CourseCollectionView"
