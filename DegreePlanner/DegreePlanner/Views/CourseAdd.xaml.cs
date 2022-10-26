@@ -26,5 +26,15 @@ namespace DegreePlanner.Views
 		{
 			await Navigation.PopAsync();
 		}
+
+		private void AddCourseStart_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
+		}
+
+		private void AddCourseEnd_DateSelected(object sender, DateChangedEventArgs e)
+		{
+
+		}
 	}
 }
