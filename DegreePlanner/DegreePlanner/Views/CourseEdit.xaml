@@ -39,7 +39,7 @@
 				<Picker x:Name="TermSelect" Grid.Row="1" Grid.Column="1" />
 				
 				<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Course Name</Label>
-				<Entry Text="{Binding Course}" x:Name="CourseName" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
+				<Entry Text="{Binding CourseName}" x:Name="CourseName" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
 				
 				<Label Grid.Row="3" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Status</Label>
 				<Picker x:Name="CourseStatus" Grid.Row="3" Grid.Column="1" />
@@ -51,10 +51,10 @@
 				<DatePicker x:Name="CourseEnd" Grid.Row="5" Grid.Column="1" DateSelected="CourseEnd_DateSelected" />
 				
 				<Label Grid.Row="6" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Course Instructor</Label>
-				<Entry Text="{Binding Instructor}" x:Name="InstructorName" Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
+				<Entry Text="{Binding InstName}" x:Name="InstructorName" Grid.Row="6" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
 				
 				<Label Grid.Row="7" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Instructor Email</Label>
-				<Entry Text="{Binding Email}" x:Name="InstructorEmail" Grid.Row="7" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
+				<Entry Text="{Binding InstEmail}" x:Name="InstructorEmail" Grid.Row="7" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
 				
 				<Label Grid.Row="8" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Instructor Phone</Label>
 				<Entry Text="{Binding Phone}" x:Name="InstructorPhone" Grid.Row="8" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>

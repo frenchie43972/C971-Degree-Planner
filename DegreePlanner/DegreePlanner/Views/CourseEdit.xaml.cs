@@ -16,6 +16,14 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
+		public CourseEdit(CourseEdit selectedCourse)
+		{
+			InitializeComponent();
+
+			CourseId.Text = selectedCourse.Id.ToString();
+			TermSelect.SelectedItem = selectedCourse.TermSelect; // No Idea how to get this here
+		}
+
 		private void SaveCourse_Clicked(object sender, EventArgs e)
 		{
 

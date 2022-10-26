@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DegreePlanner.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,9 +17,9 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
-		private void SaveCourse_Clicked(object sender, EventArgs e)
+		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
-
+			await Navigation.PushAsync(new CourseAdd());
 		}
 
 		async void CancelCourse_Clicked(object sender, EventArgs e)
