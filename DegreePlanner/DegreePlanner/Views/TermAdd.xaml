@@ -16,7 +16,6 @@
 				   Margin="10,0,10,0"/>
 			<Editor Placeholder="Enter a Term Name"
 					x:Name="TermName"
-					Text="{Binding TermTitle}"
 					Margin="10,0,10,0" />
 			<Grid Padding="0,0,0,25">
 				<Label Text="Start Date"

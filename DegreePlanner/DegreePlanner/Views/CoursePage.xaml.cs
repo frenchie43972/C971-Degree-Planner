@@ -18,11 +18,11 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
-		protected override async void OnAppearing()
-		{
-			base.OnAppearing();
-			CourseCollectionView.ItemsSource = await DatabaseServices.GetCourse();
-		}
+		//protected override async void OnAppearing()
+		//{
+		//	base.OnAppearing();
+		//	CourseCollectionView.ItemsSource = await DatabaseServices.GetCourse();
+		//}
 
 		async void AddCourse_Clicked(object sender, EventArgs e)
 		{

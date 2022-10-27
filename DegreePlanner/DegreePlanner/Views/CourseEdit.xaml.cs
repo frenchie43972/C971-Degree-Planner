@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DegreePlanner.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,12 +17,13 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
-		public CourseEdit(CourseEdit selectedCourse)
+		public CourseEdit(Course selectedCourse)
 		{
 			InitializeComponent();
 
 			CourseId.Text = selectedCourse.Id.ToString();
-			TermSelect.SelectedItem = selectedCourse.TermSelect; // No Idea how to get this here
+			// Set Datasource iterate through and select 
+			//TermSelect.SelectedItem = selectedCourse.TermSelect; 
 		}
 
 		private void SaveCourse_Clicked(object sender, EventArgs e)

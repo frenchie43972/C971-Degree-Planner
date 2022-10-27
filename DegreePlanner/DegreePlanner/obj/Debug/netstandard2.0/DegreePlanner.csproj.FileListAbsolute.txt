@@ -55,3 +55,4 @@ D:\degree-planner\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\nets
 D:\degree-planner\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.dll
 D:\degree-planner\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\ref\DegreePlanner.dll
 D:\degree-planner\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.pdb
+D:\degree-planner\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.AssemblyReference.cache

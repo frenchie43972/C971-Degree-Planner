@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DegreePlanner.Models;
+using DegreePlanner.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,8 +18,23 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
+		protected override async void OnAppearing()
+		{
+			base.OnAppearing();
+			var termList = await DatabaseServices.GetTerm();
+
+			AddCourseTerm.ItemsSource = (System.Collections.IList)termList;
+		}
+
 		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
+			//Term t = (Term)AddCourseTerm.SelectedItem;
+			//var t = await DatabaseServices.GetTerm();
+			//AddCourseTerm.ItemsSource = (System.Collections.IList)t;
+
+			await DatabaseServices.AddCourse(AddCourseTerm.SelectedIndex , AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
+									AddCourseStart.Date, AddCourseEnd.Date, AddCourseInst.Text, AddInstEmail.Text, AddInstPhone.Text,
+									CourseNotes.Text, NotificationAdd.IsEnabled);
 			await Navigation.PushAsync(new CourseAdd());
 		}
 
