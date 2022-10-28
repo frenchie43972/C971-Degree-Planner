@@ -32,7 +32,7 @@
 				</Grid.ColumnDefinitions>
 
 				<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Term</Label>
-				<Picker Title="Term Select" x:Name="AddCourseTerm" ItemsSource="{Binding Terms}" ItemDisplayBinding="{Binding Name}" Grid.Row="0" Grid.Column="1" />
+				<Picker Title="Term Select" x:Name="AddCourseTerm" Grid.Row="0" Grid.Column="1" />
 				
 				<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Course Name</Label>
 				<Entry Text="{Binding AddCourse}" x:Name="AddCourseName" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"></Entry>

@@ -22,17 +22,25 @@ namespace DegreePlanner.Views
 		{
 			base.OnAppearing();
 			var termList = await DatabaseServices.GetTerm();
-
 			AddCourseTerm.ItemsSource = (System.Collections.IList)termList;
+
+
+			foreach (var term in termList)
+			{
+				await DisplayAlert("Error!", term.TermName.ToString(), "Ok");
+
+				System.Collections.IList termName = term.TermName.ToList();
+				AddCourseTerm.ItemsSource = termName;
+
+			}
 		}
 
 		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
-			//Term t = (Term)AddCourseTerm.SelectedItem;
 			//var t = await DatabaseServices.GetTerm();
 			//AddCourseTerm.ItemsSource = (System.Collections.IList)t;
 
-			await DatabaseServices.AddCourse(AddCourseTerm.SelectedIndex , AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
+			await DatabaseServices.AddCourse(AddCourseTerm.SelectedIndex, AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
 									AddCourseStart.Date, AddCourseEnd.Date, AddCourseInst.Text, AddInstEmail.Text, AddInstPhone.Text,
 									CourseNotes.Text, NotificationAdd.IsEnabled);
 			await Navigation.PushAsync(new CourseAdd());
