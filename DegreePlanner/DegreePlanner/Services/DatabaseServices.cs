@@ -60,11 +60,6 @@ namespace DegreePlanner.Services
 			return terms;
 		}
 
-		//internal static Task AddCourse(object p, string text1, string selectedItem, DateTime date1, DateTime date2, string text2, string text3, string text4, string text5, bool isEnabled)
-		//{
-		//	throw new NotImplementedException();
-		//}
-
 		public static async Task UpdateTerm(int id, string name, DateTime start, DateTime end)
 		{
 			await Init();
