@@ -28,6 +28,7 @@ namespace DegreePlanner.Services
 			_dbConnection = new SQLiteAsyncConnection(databasePath);
 
 			await _db.CreateTableAsync<Term>();
+			await _db.CreateTableAsync<Course>();
 		}
 
 		#region Term Methods

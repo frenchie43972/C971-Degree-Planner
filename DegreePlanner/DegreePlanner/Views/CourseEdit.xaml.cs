@@ -33,7 +33,7 @@ namespace DegreePlanner.Views
 
 		async void CancelCourse_Clicked(object sender, EventArgs e)
 		{
-			//await Init();
+			await Navigation.PopAsync();
 		}
 
 		private void DeleteCourse_Clicked(object sender, EventArgs e)

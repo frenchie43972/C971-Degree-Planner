@@ -18,11 +18,11 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 		}
 
-		//protected override async void OnAppearing()
-		//{
-		//	base.OnAppearing();
-		//	CourseCollectionView.ItemsSource = await DatabaseServices.GetCourse();
-		//}
+		protected override async void OnAppearing()
+		{
+			base.OnAppearing();
+			CourseCollectionView.ItemsSource = await DatabaseServices.GetCourse();
+		}
 
 		async void AddCourse_Clicked(object sender, EventArgs e)
 		{
@@ -37,10 +37,6 @@ namespace DegreePlanner.Views
 				await Navigation.PushAsync(new CourseEdit(course));
 			}
 		}
-
-		async void EditCourse_Clicked(object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new CourseEdit());
-		}
+		
 	}
 }

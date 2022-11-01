@@ -6,7 +6,6 @@
 
 	<ContentPage.ToolbarItems>
 		<ToolbarItem x:Name="AddCourse" Text="Add Course" Clicked="AddCourse_Clicked"></ToolbarItem>
-		<ToolbarItem x:Name="EditCourse" Text="Edit Course" Clicked="EditCourse_Clicked"></ToolbarItem>
 	</ContentPage.ToolbarItems>
 
 	<CollectionView x:Name="CourseCollectionView"
@@ -38,10 +37,10 @@
 						<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Name</Label>
 						<Label Text="{Binding CourseName}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
 
-						<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Start</Label>
+						<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">Start</Label>
 						<Label Text="{Binding CourseStart}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
 
-						<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">End</Label>
+						<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold">End</Label>
 						<Label Text="{Binding CourseEnd}" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium"/>
 
 					</Grid>
