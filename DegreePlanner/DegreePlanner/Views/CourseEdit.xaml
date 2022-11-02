@@ -36,13 +36,13 @@
 				<Entry Text="{Binding Id}" x:Name="CourseId" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" IsReadOnly="True"></Entry>
 				
 				<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Term</Label>
-				<Picker x:Name="TermSelect" Grid.Row="1" Grid.Column="1" />
+				<Picker x:Name="TermSelect" Title="TermSel" Grid.Row="1" Grid.Column="1" />
 				
 				<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Course Name</Label>
 				<Entry Text="{Binding CourseName}" x:Name="CourseName" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
 				
 				<Label Grid.Row="3" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Status</Label>
-				<Picker x:Name="CourseStatus" Grid.Row="3" Grid.Column="1" />
+				<Picker x:Name="CourseStatus" Title="CourseStat" Grid.Row="3" Grid.Column="1" />
 				
 				<Label Grid.Row="4" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Start</Label>
 				<DatePicker x:Name="CourseStart" Grid.Row="4" Grid.Column="1" DateSelected="CourseStart_DateSelected" />
