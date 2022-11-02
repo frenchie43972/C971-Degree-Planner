@@ -44,7 +44,7 @@ namespace DegreePlanner.Views
 
 			await DatabaseServices.AddCourse(t.Id, AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
 									AddCourseStart.Date, AddCourseEnd.Date, AddCourseInst.Text, AddInstEmail.Text, AddInstPhone.Text,
-									CourseNotes.Text, NotificationAdd.IsEnabled);
+									CourseNotes.Text, NotificationAdd.IsToggled);
 			await Navigation.PushAsync(new CourseAdd());
 		}
 

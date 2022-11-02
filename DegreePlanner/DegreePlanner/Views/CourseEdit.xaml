@@ -36,7 +36,7 @@
 				<Entry Text="{Binding Id}" x:Name="CourseId" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" IsReadOnly="True"></Entry>
 				
 				<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Term</Label>
-				<Picker x:Name="TermSelect" Title="TermSel" Grid.Row="1" Grid.Column="1" />
+				<Picker x:Name="TermSelect" Title="TermSel" ItemDisplayBinding="{Binding TermName}" Grid.Row="1" Grid.Column="1" />
 				
 				<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Course Name</Label>
 				<Entry Text="{Binding CourseName}" x:Name="CourseName" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
