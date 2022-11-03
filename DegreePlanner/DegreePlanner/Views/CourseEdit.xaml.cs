@@ -43,17 +43,20 @@ namespace DegreePlanner.Views
 			var termList = await DatabaseServices.GetTerm();
 			TermSelect.ItemsSource = (System.Collections.IList)termList;
 
+			//var statusList = await DatabaseServices.GetCourse();
+			//CourseStatus.ItemsSource = (System.Collections.IList)statusList;
+
 			CourseId.Text = myCourse.Id.ToString();
-			TermSelect.Title = "Select a Term"; 
+			TermSelect.Title = "Term Select"; 
 			CourseName.Text = myCourse.CourseName.ToString();
-			CourseStatus.Title = myCourse.CourseStatus.ToString();
+			CourseStatus.Title = myCourse.CourseStatus;
 			CourseStart.Date = myCourse.CourseStart.Date;
 			CourseEnd.Date = myCourse.CourseEnd.Date;
 			InstructorName.Text = myCourse.InstName.ToString();
 			InstructorEmail.Text = myCourse.InstEmail.ToString();
 			InstructorPhone.Text = myCourse.InstPhone.ToString();
 			EditNotes.Text = myCourse.Notes;
-			NotificationEdit.IsEnabled = myCourse.Notification;
+			NotificationEdit.IsToggled = myCourse.Notification;
 
 
 			foreach (var term in termList)
@@ -64,6 +67,7 @@ namespace DegreePlanner.Views
 					break;
 				}
 			}
+
 		}
 
 		private void SaveCourse_Clicked(object sender, EventArgs e)

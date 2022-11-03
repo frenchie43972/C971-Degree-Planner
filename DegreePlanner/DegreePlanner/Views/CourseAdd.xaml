@@ -66,7 +66,7 @@
 				<Editor Text="{Binding AddNotes}" x:Name="CourseNotes"  Grid.Row="8" Grid.Column="1" />
 				
 				<Label Grid.Row="9" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Turn on Notification</Label>
-				<Switch x:Name="NotificationAdd"  Grid.Row="9" Grid.Column="1" />
+				<Switch x:Name="NotificationAdd" IsToggled="False" Grid.Row="9" Grid.Column="1" />
 				
 			</Grid>
 

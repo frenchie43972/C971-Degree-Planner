@@ -42,7 +42,14 @@
 				<Entry Text="{Binding CourseName}" x:Name="CourseName" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" ></Entry>
 				
 				<Label Grid.Row="3" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Status</Label>
-				<Picker x:Name="CourseStatus" Title="CourseStat" Grid.Row="3" Grid.Column="1" />
+				<Picker x:Name="CourseStatus" Title="CourseStat" Grid.Row="3" Grid.Column="1" >
+					<Picker.Items>
+						<x:String>In Progress</x:String>
+						<x:String>Not Started</x:String>
+						<x:String>Plan to Take</x:String>
+						<x:String>Dropped</x:String>
+					</Picker.Items>
+				</Picker>
 				
 				<Label Grid.Row="4" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Start</Label>
 				<DatePicker x:Name="CourseStart" Grid.Row="4" Grid.Column="1" DateSelected="CourseStart_DateSelected" />
