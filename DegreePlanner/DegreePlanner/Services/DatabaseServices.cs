@@ -152,6 +152,8 @@ namespace DegreePlanner.Services
 				courseQuery.InstPhone = instPhone;
 				courseQuery.Notes = notes;
 				courseQuery.Notification = notifications;
+
+				await _db.UpdateAsync(courseQuery);
 			}
 		}
 

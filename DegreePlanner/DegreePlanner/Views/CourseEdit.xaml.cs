@@ -21,20 +21,6 @@ namespace DegreePlanner.Views
 
 			myCourse = selectedCourse;
 
-			//CourseId.Text = selectedCourse.Id.ToString();
-			//TermSelect.Title = selectedCourse.TermId.ToString(); // Need to display Term Name
-			//CourseName.Text = selectedCourse.CourseName.ToString();
-			//CourseStatus.Title = selectedCourse.CourseStatus.ToString();
-			//CourseStart.Date = selectedCourse.CourseStart.Date;
-			//CourseEnd.Date = selectedCourse.CourseEnd.Date;
-			//InstructorName.Text = selectedCourse.InstName.ToString();
-			//InstructorEmail.Text = selectedCourse.InstEmail.ToString();
-			//InstructorPhone.Text = selectedCourse.InstPhone.ToString();
-			//EditNotes.Text = selectedCourse.Notes.ToString();
-			//NotificationEdit = selectedCourse.Notification.ToString();
-			
-			// Set Datasource iterate through and select 
-			//TermSelect.SelectedItem = selectedCourse.TermSelect; 
 		}
 
 		protected override async void OnAppearing()
@@ -42,9 +28,6 @@ namespace DegreePlanner.Views
 			base.OnAppearing();
 			var termList = await DatabaseServices.GetTerm();
 			TermSelect.ItemsSource = (System.Collections.IList)termList;
-
-			//var statusList = await DatabaseServices.GetCourse();
-			//CourseStatus.ItemsSource = (System.Collections.IList)statusList;
 
 			CourseId.Text = myCourse.Id.ToString();
 			TermSelect.Title = "Term Select"; 
@@ -70,9 +53,13 @@ namespace DegreePlanner.Views
 
 		}
 
-		private void SaveCourse_Clicked(object sender, EventArgs e)
+		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
-
+			
+			await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), CourseName.Text, CourseStatus.Title,
+									DateTime.Parse(CourseStart.Date.ToString()), DateTime.Parse(CourseEnd.Date.ToString()),
+									InstructorName.Text, InstructorEmail.Text, InstructorPhone.Text, EditNotes.Text, NotificationEdit.IsToggled);
+			await Navigation.PopAsync();
 		}
 
 		async void CancelCourse_Clicked(object sender, EventArgs e)
@@ -80,7 +67,7 @@ namespace DegreePlanner.Views
 			await Navigation.PopAsync();
 		}
 
-		async  void DeleteCourse_Clicked(object sender, EventArgs e)
+		async void DeleteCourse_Clicked(object sender, EventArgs e)
 		{
 			var id = int.Parse(CourseId.Text);
 
