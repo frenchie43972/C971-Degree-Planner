@@ -6,6 +6,7 @@
 	<ContentPage.ToolbarItems>
 		<ToolbarItem x:Name="Terms" Text="Terms" Clicked="Terms_Clicked"></ToolbarItem>
 		<ToolbarItem x:Name="Courses" Text="Courses" Clicked="Courses_Clicked"></ToolbarItem>
+		<ToolbarItem x:Name="Assessments" Text="Assessments" Clicked="Assessments_Clicked"></ToolbarItem>
 	</ContentPage.ToolbarItems>
 	
     <ContentPage.Content>

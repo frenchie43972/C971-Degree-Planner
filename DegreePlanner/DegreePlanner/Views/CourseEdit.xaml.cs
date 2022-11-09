@@ -55,6 +55,8 @@ namespace DegreePlanner.Views
 
 		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
+
+			// Cannot save the Term change yet
 			
 			await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), CourseName.Text, CourseStatus.Title,
 									DateTime.Parse(CourseStart.Date.ToString()), DateTime.Parse(CourseEnd.Date.ToString()),

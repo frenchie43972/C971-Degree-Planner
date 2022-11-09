@@ -29,6 +29,7 @@ namespace DegreePlanner.Services
 
 			await _db.CreateTableAsync<Term>();
 			await _db.CreateTableAsync<Course>();
+			await _db.CreateTableAsync<Assessment>();
 		}
 
 		#region Term Methods
@@ -155,6 +156,51 @@ namespace DegreePlanner.Services
 
 				await _db.UpdateAsync(courseQuery);
 			}
+		}
+
+		#endregion
+
+		#region Assessment Methods
+		public static async Task AddAssess(int courseId, string asessType, DateTime dueDate, bool assessNotify)
+		{
+			await Init();
+
+			var assessment = new Assessment
+			{
+				CourseId = courseId,
+				TypeAssess = asessType,
+				AssessDueDate = dueDate,
+				Notifications = assessNotify,
+			};
+
+			await _db.InsertAsync(assessment);
+
+			var id = assessment.AssessId;
+		}
+
+		public static async Task RemoveAssess(int id)
+		{
+			await Init();
+
+			await _db.DeleteAsync<Assessment>(id);
+		}
+
+		public static async Task<IEnumerable<Assessment>> GetAssessment(int courseId)
+		{
+			await Init();
+
+			var assessments = await _db.Table<Assessment>().Where(i => i.CourseId == courseId).ToListAsync();
+
+			return assessments;
+		}
+
+		public static async Task<IEnumerable<Assessment>> GetAssessment()
+		{
+			await Init();
+
+			var assessments = await _db.Table<Assessment>().ToListAsync();
+
+			return assessments;
 		}
 
 		#endregion

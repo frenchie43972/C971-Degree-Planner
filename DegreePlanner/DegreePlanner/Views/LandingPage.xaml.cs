@@ -26,5 +26,10 @@ namespace DegreePlanner.Views
 		{
 			await Navigation.PushAsync(new CoursePage());
 		}
+
+		async void Assessments_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new AssessPage());
+		}
 	}
 }
