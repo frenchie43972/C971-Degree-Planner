@@ -4,14 +4,18 @@
              x:Class="DegreePlanner.Views.LandingPage">
 
 	<ContentPage.ToolbarItems>
-		<ToolbarItem x:Name="AddTerm" Text="Add Term" Clicked="AddTerm_Clicked"></ToolbarItem> 
+		<ToolbarItem x:Name="Terms" Text="Terms" Clicked="Terms_Clicked"></ToolbarItem>
+		<ToolbarItem x:Name="Courses" Text="Courses" Clicked="Courses_Clicked"></ToolbarItem>
+		<ToolbarItem x:Name="Assessments" Text="Assessments" Clicked="Assessments_Clicked"></ToolbarItem>
 	</ContentPage.ToolbarItems>
 	
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome Night Owls!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+				FontAttributes="Bold"
+				FontSize="Large"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

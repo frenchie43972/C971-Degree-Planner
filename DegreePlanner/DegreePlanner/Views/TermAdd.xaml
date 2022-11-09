@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DegreePlanner.Views.TermAdd"
 			 Title="Add Term">
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="SaveTerm" Text="Save" Clicked="SaveTerm_Clicked"></ToolbarItem>
+		<ToolbarItem x:Name="CancelTerm" Text="Cancel" Clicked="CancelTerm_Clicked"></ToolbarItem>
+	</ContentPage.ToolbarItems>
 	
     <ContentPage.Content>
         <StackLayout>
@@ -11,7 +16,6 @@
 				   Margin="10,0,10,0"/>
 			<Editor Placeholder="Enter a Term Name"
 					x:Name="TermName"
-					Text="{Binding TermTitle}"
 					Margin="10,0,10,0" />
 			<Grid Padding="0,0,0,25">
 				<Label Text="Start Date"
@@ -37,11 +41,7 @@
 							Grid.Row="1"
 							Margin="0,0,15,0"/>
 			</Grid>
-			<Button Text="Save"
-					Margin="90,0,90,0"
-					Padding="20"
-					BackgroundColor="#607EAA"
-					Clicked="SaveButton_Clicked"/>
+			
 		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
