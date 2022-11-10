@@ -202,7 +202,26 @@ namespace DegreePlanner.Services
 
 			return assessments;
 		}
-		// Test push/pull
+
+		public static async Task UpdateAssess(int courseId, string asessType, DateTime dueDate, bool assessNotify)
+		{
+			await Init();
+
+			var assessQuery = await _db.Table<Assessment>()
+				.Where(i => i.AssessId == courseId)
+				.FirstOrDefaultAsync();
+
+			if (assessQuery != null)
+			{
+				assessQuery.TypeAssess = asessType;
+				assessQuery.AssessDueDate = dueDate;
+				assessQuery.Notifications = assessNotify;
+				
+
+				await _db.UpdateAsync(assessQuery);
+			}
+		}
+
 		#endregion
 
 	}
