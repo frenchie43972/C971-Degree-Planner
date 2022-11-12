@@ -7,8 +7,7 @@ using DegreePlanner.Models;
 using DegreePlanner.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DegreePlanner.Models;
-using DegreePlanner.Services;
+
 
 namespace DegreePlanner.Views
 {
@@ -21,6 +20,21 @@ namespace DegreePlanner.Views
 		{
 			InitializeComponent();
 			myAssessment = selectedAssess;
+		}
+
+		private void SaveEdit_Clicked(object sender, EventArgs e)
+		{
+
+		}
+
+		private void CancelEdit_Clicked(object sender, EventArgs e)
+		{
+
+		}
+
+		private void DeleteAssess_Clicked(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
