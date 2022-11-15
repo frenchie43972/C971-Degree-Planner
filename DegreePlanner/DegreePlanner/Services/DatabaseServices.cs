@@ -12,7 +12,6 @@ namespace DegreePlanner.Services
 	public static class DatabaseServices
 	{
 		private static SQLiteAsyncConnection _db;
-		private static SQLiteAsyncConnection _dbConnection;
 
 		static async Task Init()
 		{
@@ -25,7 +24,6 @@ namespace DegreePlanner.Services
 			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term.db");
 
 			_db = new SQLiteAsyncConnection(databasePath);
-			_dbConnection = new SQLiteAsyncConnection(databasePath);
 
 			await _db.CreateTableAsync<Term>();
 			await _db.CreateTableAsync<Course>();

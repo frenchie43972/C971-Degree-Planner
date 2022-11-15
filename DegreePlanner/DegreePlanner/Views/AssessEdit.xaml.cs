@@ -22,17 +22,57 @@ namespace DegreePlanner.Views
 			myAssessment = selectedAssess;
 		}
 
+		protected override async void OnAppearing()
+		{
+			base.OnAppearing();
+			var courseList = await DatabaseServices.GetCourse();
+			CourseSelect.ItemsSource = (System.Collections.IList)courseList;
+
+			AssId.Text = myAssessment.AssessId.ToString();
+			AssessType.Title = myAssessment.TypeAssess;
+			CourseSelect.Title = "Course Select";
+			DueDate.Date = myAssessment.AssessDueDate.Date;
+			NotifyEdit.IsToggled = myAssessment.Notifications;
+
+			foreach (var course in courseList)
+			{
+				if (course.Id == myAssessment.CourseId)
+				{
+					CourseSelect.SelectedItem = course;
+					break;
+				}
+			}
+		}
+
 		private void SaveEdit_Clicked(object sender, EventArgs e)
 		{
 
 		}
 
-		private void CancelEdit_Clicked(object sender, EventArgs e)
+		async void CancelEdit_Clicked(object sender, EventArgs e)
 		{
+			await Navigation.PopAsync();
 
 		}
 
-		private void DeleteAssess_Clicked(object sender, EventArgs e)
+		async void DeleteAssess_Clicked(object sender, EventArgs e)
+		{
+			var id = int.Parse(AssId.Text);
+
+			var confirmDelete = await DisplayAlert("Confirm", "Are you sure you wnat to delete this record?", "Ok", "Cancel");
+
+			if (confirmDelete == true)
+			{
+				await DatabaseServices.RemoveCourse(id);
+				await Navigation.PopAsync();
+			}
+			else
+			{
+				return;
+			}
+		}
+
+		private void DueDate_DateSelected(object sender, DateChangedEventArgs e)
 		{
 
 		}

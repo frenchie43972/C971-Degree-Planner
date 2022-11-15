@@ -25,16 +25,16 @@
 					<ColumnDefinition Width="Auto" />
 				</Grid.ColumnDefinitions>
 
-				<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Course</Label>
-				<Picker Title="Course Select" x:Name="AssessTermAdd" ItemDisplayBinding="{Binding CourseName}" Grid.Row="0" Grid.Column="1"/>
-
-				<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Assessment</Label>
-				<Picker Title="Assessment Type" x:Name="TypeAssess" Grid.Row="1" Grid.Column="1">
+				<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Assessment</Label>
+				<Picker Title="Assessment Type" x:Name="TypeAssess" Grid.Row="0" Grid.Column="1">
 					<Picker.Items>
 						<x:String>Objective Assessment</x:String>
 						<x:String>Performance Assessment</x:String>
 					</Picker.Items>
 				</Picker>
+
+				<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Course</Label>
+				<Picker Title="Course Select" x:Name="AssessTermAdd" ItemDisplayBinding="{Binding CourseName}" Grid.Row="1" Grid.Column="1"/>
 
 				<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">Due Date</Label>
 				<DatePicker x:Name="AddDueDate" Grid.Row="2" Grid.Column="1" DateSelected="AddDueDate_DateSelected" />

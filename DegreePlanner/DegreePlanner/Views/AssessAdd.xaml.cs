@@ -31,6 +31,7 @@ namespace DegreePlanner.Views
 
 			await DatabaseServices.AddAssess(c.Id, (string)TypeAssess.SelectedItem,
 										AddDueDate.Date, NotificationAdd.IsToggled);
+			await Navigation.PopAsync();
 		}
 
 		async void CancelAssess_Clicked(object sender, EventArgs e)
