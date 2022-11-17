@@ -83,7 +83,7 @@ namespace DegreePlanner.Services
 
 		public static async Task AddCourse(int termId, string courseName, string courseStatus,
 					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
-					string instPhone, string notes, bool notifications)
+					string instPhone, string notes, bool notifiyStart, bool notifiyEnd)
 		{
 			await Init();
 			var course = new Course
@@ -97,7 +97,8 @@ namespace DegreePlanner.Services
 				InstEmail = instEmail,
 				InstPhone = instPhone,
 				Notes = notes,
-				Notification = notifications,
+				NotificationStart = notifiyStart,
+				NotificationEnd = notifiyEnd,
 			};
 
 			await _db.InsertAsync(course);
@@ -132,7 +133,7 @@ namespace DegreePlanner.Services
 
 		public static async Task UpdateCourse(int id, int termId, string courseName, string courseStatus,
 					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
-					string instPhone, string notes, bool notifications)
+					string instPhone, string notes, bool notifiyStart, bool notifiyEnd)
 		{
 			await Init();
 
@@ -151,7 +152,8 @@ namespace DegreePlanner.Services
 				courseQuery.InstEmail = instEmail;
 				courseQuery.InstPhone = instPhone;
 				courseQuery.Notes = notes;
-				courseQuery.Notification = notifications;
+				courseQuery.NotificationStart = notifiyStart;
+				courseQuery.NotificationEnd = notifiyEnd;
 
 				await _db.UpdateAsync(courseQuery);
 			}

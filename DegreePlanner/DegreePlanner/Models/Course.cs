@@ -19,6 +19,7 @@ namespace DegreePlanner.Models
 		public string InstEmail { get; set; }
 		public string InstPhone { get; set; }
 		public string Notes { get; set; }
-		public bool Notification { get; set; }
+		public bool NotificationStart { get; set; }
+		public bool NotificationEnd { get; set; }
 	}
 }

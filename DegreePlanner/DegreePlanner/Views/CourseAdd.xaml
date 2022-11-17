@@ -24,6 +24,7 @@
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
 				</Grid.RowDefinitions>
 
 				<Grid.ColumnDefinitions>
@@ -65,9 +66,12 @@
 				<Label Grid.Row="8" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Notes</Label>
 				<Editor Text="{Binding AddNotes}" x:Name="CourseNotes"  Grid.Row="8" Grid.Column="1" />
 				
-				<Label Grid.Row="9" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Turn on Notification</Label>
+				<Label Grid.Row="9" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >Start Notify</Label>
 				<Switch x:Name="NotificationAdd" IsToggled="False" Grid.Row="9" Grid.Column="1" />
-				
+
+				<Label Grid.Row="10" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" >End Notify</Label>
+				<Switch x:Name="NotifyEnd" IsToggled="False" Grid.Row="10" Grid.Column="1" />
+
 			</Grid>
 
 		</StackLayout>

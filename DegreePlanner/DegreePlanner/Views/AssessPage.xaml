@@ -37,7 +37,7 @@
 						<Label Grid.Row="0" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" >Assesment Type</Label>
 						<Label Text="{Binding TypeAssess}" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium" />
 						
-						<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" >Course Name</Label>
+						<Label Grid.Row="1" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" >Course ID</Label>
 						<Label Text="{Binding CourseId}" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" FontSize="Medium" />
 						
 						<Label Grid.Row="2" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center" FontAttributes="Bold" >Due Date</Label>

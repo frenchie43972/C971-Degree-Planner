@@ -32,14 +32,15 @@ namespace DegreePlanner.Views
 			CourseId.Text = myCourse.Id.ToString();
 			TermSelect.Title = "Term Select"; 
 			CourseName.Text = myCourse.CourseName.ToString();
-			CourseStatus.Title = myCourse.CourseStatus;
+			CourseStatus.SelectedItem = myCourse.CourseStatus;
 			CourseStart.Date = myCourse.CourseStart.Date;
 			CourseEnd.Date = myCourse.CourseEnd.Date;
 			InstructorName.Text = myCourse.InstName.ToString();
 			InstructorEmail.Text = myCourse.InstEmail.ToString();
 			InstructorPhone.Text = myCourse.InstPhone.ToString();
 			EditNotes.Text = myCourse.Notes;
-			NotificationEdit.IsToggled = myCourse.Notification;
+			NotificationEdit.IsToggled = myCourse.NotificationStart;
+			NotificationEnd.IsToggled = myCourse.NotificationEnd;
 
 
 			foreach (var term in termList)
@@ -58,9 +59,10 @@ namespace DegreePlanner.Views
 			
 			Term t = (Term)TermSelect.SelectedItem;
 
-			await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), t.Id, CourseName.Text, CourseStatus.Title,
+			await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), t.Id, CourseName.Text, CourseStatus.SelectedItem.ToString(),
 									DateTime.Parse(CourseStart.Date.ToString()), DateTime.Parse(CourseEnd.Date.ToString()),
-									InstructorName.Text, InstructorEmail.Text, InstructorPhone.Text, EditNotes.Text, NotificationEdit.IsToggled);
+									InstructorName.Text, InstructorEmail.Text, InstructorPhone.Text, EditNotes.Text,
+									NotificationEdit.IsToggled, NotificationEnd.IsToggled);
 
 			await Navigation.PopAsync();
 		}
@@ -76,7 +78,7 @@ namespace DegreePlanner.Views
 
 			var confirmDelete = await DisplayAlert("Confirm", "Are you sure you wnat to delete this record?", "Ok", "Cancel");
 
-			if (confirmDelete == true)
+			if (confirmDelete)
 			{
 				await DatabaseServices.RemoveCourse(id);
 				await Navigation.PopAsync();

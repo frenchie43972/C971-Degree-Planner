@@ -33,7 +33,7 @@ namespace DegreePlanner.Views
 
 			await DatabaseServices.AddCourse(t.Id, AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
 									AddCourseStart.Date, AddCourseEnd.Date, AddCourseInst.Text, AddInstEmail.Text, AddInstPhone.Text,
-									CourseNotes.Text, NotificationAdd.IsToggled);
+									CourseNotes.Text, NotificationAdd.IsToggled, NotifyEnd.IsToggled);
 			await Navigation.PopAsync();
 		}
 
