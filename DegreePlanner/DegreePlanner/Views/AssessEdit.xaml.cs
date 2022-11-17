@@ -29,7 +29,7 @@ namespace DegreePlanner.Views
 			CourseSelect.ItemsSource = (System.Collections.IList)courseList;
 
 			AssId.Text = myAssessment.AssessId.ToString();
-			AssessType.Title = myAssessment.TypeAssess;
+			AssessType.SelectedItem = myAssessment.TypeAssess;
 			CourseSelect.Title = "Course Select";
 			DueDate.Date = myAssessment.AssessDueDate.Date;
 			NotifyEdit.IsToggled = myAssessment.Notifications;
@@ -48,7 +48,7 @@ namespace DegreePlanner.Views
 		{
 			Course c = (Course)CourseSelect.SelectedItem;
 
-			await DatabaseServices.UpdateAssess(Int32.Parse(AssId.Text), c.Id, AssessType.Title,
+			await DatabaseServices.UpdateAssess(Int32.Parse(AssId.Text), c.Id, AssessType.SelectedItem.ToString(),
 											DueDate.Date, NotifyEdit.IsToggled);
 			await Navigation.PopAsync();
 		}
