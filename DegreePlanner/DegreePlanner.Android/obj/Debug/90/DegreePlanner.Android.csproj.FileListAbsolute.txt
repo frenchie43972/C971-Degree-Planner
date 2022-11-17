@@ -2002,6 +2002,7 @@ D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Deb
 D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.Android.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\DegreePlanner.Android.pdb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\bin\Debug\com.companyname.degreeplanner.apk
@@ -2064,7 +2065,6 @@ C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Deb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\Java.Interop.dll
-C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\Mono.Android.pdb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\Mono.Security.dll
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\Mono.Security.pdb

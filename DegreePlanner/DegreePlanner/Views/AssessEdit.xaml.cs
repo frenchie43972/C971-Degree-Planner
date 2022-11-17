@@ -44,9 +44,13 @@ namespace DegreePlanner.Views
 			}
 		}
 
-		private void SaveEdit_Clicked(object sender, EventArgs e)
+		async void SaveEdit_Clicked(object sender, EventArgs e)
 		{
+			Course c = (Course)CourseSelect.SelectedItem;
 
+			await DatabaseServices.UpdateAssess(Int32.Parse(AssId.Text), c.Id, AssessType.Title,
+											DueDate.Date, NotifyEdit.IsToggled);
+			await Navigation.PopAsync();
 		}
 
 		async void CancelEdit_Clicked(object sender, EventArgs e)
@@ -63,7 +67,7 @@ namespace DegreePlanner.Views
 
 			if (confirmDelete == true)
 			{
-				await DatabaseServices.RemoveCourse(id);
+				await DatabaseServices.RemoveAssess(id);
 				await Navigation.PopAsync();
 			}
 			else

@@ -55,12 +55,13 @@ namespace DegreePlanner.Views
 
 		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
-
-			// Cannot save the Term change yet
 			
-			await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), CourseName.Text, CourseStatus.Title,
+			Term t = (Term)TermSelect.SelectedItem;
+
+			await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), t.Id, CourseName.Text, CourseStatus.Title,
 									DateTime.Parse(CourseStart.Date.ToString()), DateTime.Parse(CourseEnd.Date.ToString()),
 									InstructorName.Text, InstructorEmail.Text, InstructorPhone.Text, EditNotes.Text, NotificationEdit.IsToggled);
+
 			await Navigation.PopAsync();
 		}
 

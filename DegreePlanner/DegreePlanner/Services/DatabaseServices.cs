@@ -130,7 +130,7 @@ namespace DegreePlanner.Services
 			return courses;
 		}
 
-		public static async Task UpdateCourse(int id, string courseName, string courseStatus,
+		public static async Task UpdateCourse(int id, int termId, string courseName, string courseStatus,
 					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
 					string instPhone, string notes, bool notifications)
 		{
@@ -142,6 +142,7 @@ namespace DegreePlanner.Services
 
 			if (courseQuery != null)
 			{
+				courseQuery.TermId = termId;
 				courseQuery.CourseName = courseName;
 				courseQuery.CourseStatus = courseStatus;
 				courseQuery.CourseStart = courseStart;
