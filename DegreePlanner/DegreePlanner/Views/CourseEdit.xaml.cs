@@ -52,6 +52,8 @@ namespace DegreePlanner.Views
 				}
 			}
 
+			
+
 		}
 
 		async void SaveCourse_Clicked(object sender, EventArgs e)
