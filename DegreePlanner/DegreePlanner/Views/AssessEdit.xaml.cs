@@ -65,7 +65,7 @@ namespace DegreePlanner.Views
 
 			var confirmDelete = await DisplayAlert("Confirm", "Are you sure you wnat to delete this record?", "Ok", "Cancel");
 
-			if (confirmDelete == true)
+			if (confirmDelete)
 			{
 				await DatabaseServices.RemoveAssess(id);
 				await Navigation.PopAsync();

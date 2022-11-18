@@ -2503,3 +2503,6 @@ C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Deb
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\System.ComponentModel.Annotations.dll
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\System.ComponentModel.DataAnnotations.dll
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner.Android\obj\Debug\90\android\assets\System.ComponentModel.DataAnnotations.pdb

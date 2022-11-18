@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "74/sJGS7F6k4KxZrxOcv5lZJd5AidAJxuNB37wZWHv8pXRaKqmlbL99YSHxmcSzZncczyVW395KPFhRRTrAqOw==",
+  "dgSpecHash": "bqdXFV40Pm5Dm7sZhc4g5E1q67L8Gfne1VisGh0e1j7OHKnR4p9Wc9tC7OEIk5GzKArreW07lgIC6HAnZtUBGA==",
   "success": true,
   "projectFilePath": "C:\\Code Projects\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\DegreePlanner.Android.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\frenc\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.3\\sqlitepclraw.lib.e_sqlite3.android.2.0.3.nupkg.sha512",
     "C:\\Users\\frenc\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\frenc\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\frenc\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\frenc\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\frenc\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\frenc\\.nuget\\packages\\xam.plugins.notifier\\3.0.1\\xam.plugins.notifier.3.0.1.nupkg.sha512",
