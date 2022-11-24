@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-// Check ON APPEARING METHODS!!!
 namespace DegreePlanner.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
