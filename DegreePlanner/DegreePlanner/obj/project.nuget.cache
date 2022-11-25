@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qBqRlQqTbWb7G82fUlZ6DR5aPZ+jYJ0UEld1rd+Dn8L6wrgiOnBihe1Wj9kPiEOdS66di2vUmpRlbtg9Mz1O5Q==",
+  "dgSpecHash": "biPOjiKCPvLwTYG84wwEiuy2qUkVPBONXzSIfcEMNYr8Eqrr4AezX9oSKAa53GCIn0tf/a+/qxzD57F/ViW+gA==",
   "success": true,
   "projectFilePath": "D:\\971 Secondary\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner\\DegreePlanner.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Kris\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.3\\sqlitepclraw.lib.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Kris\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",

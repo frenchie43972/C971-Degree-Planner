@@ -12,7 +12,6 @@ namespace DegreePlanner.Services
 	public static class DatabaseServices
 	{
 		private static SQLiteAsyncConnection _db;
-		private static SQLiteAsyncConnection _dbConnection;
 
 		static async Task Init()
 		{
@@ -25,7 +24,6 @@ namespace DegreePlanner.Services
 			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term.db");
 
 			_db = new SQLiteAsyncConnection(databasePath);
-			_dbConnection = new SQLiteAsyncConnection(databasePath);
 
 			await _db.CreateTableAsync<Term>();
 			await _db.CreateTableAsync<Course>();
@@ -85,7 +83,7 @@ namespace DegreePlanner.Services
 
 		public static async Task AddCourse(int termId, string courseName, string courseStatus,
 					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
-					string instPhone, string notes, bool notifications)
+					string instPhone, string notes, bool notifiyStart, bool notifiyEnd)
 		{
 			await Init();
 			var course = new Course
@@ -99,7 +97,8 @@ namespace DegreePlanner.Services
 				InstEmail = instEmail,
 				InstPhone = instPhone,
 				Notes = notes,
-				Notification = notifications,
+				NotificationStart = notifiyStart,
+				NotificationEnd = notifiyEnd,
 			};
 
 			await _db.InsertAsync(course);
@@ -132,9 +131,9 @@ namespace DegreePlanner.Services
 			return courses;
 		}
 
-		public static async Task UpdateCourse(int id, string courseName, string courseStatus,
+		public static async Task UpdateCourse(int id, int termId, string courseName, string courseStatus,
 					DateTime courseStart, DateTime courseEnd, string instName, string instEmail,
-					string instPhone, string notes, bool notifications)
+					string instPhone, string notes, bool notifiyStart, bool notifiyEnd)
 		{
 			await Init();
 
@@ -144,6 +143,7 @@ namespace DegreePlanner.Services
 
 			if (courseQuery != null)
 			{
+				courseQuery.TermId = termId;
 				courseQuery.CourseName = courseName;
 				courseQuery.CourseStatus = courseStatus;
 				courseQuery.CourseStart = courseStart;
@@ -152,7 +152,8 @@ namespace DegreePlanner.Services
 				courseQuery.InstEmail = instEmail;
 				courseQuery.InstPhone = instPhone;
 				courseQuery.Notes = notes;
-				courseQuery.Notification = notifications;
+				courseQuery.NotificationStart = notifiyStart;
+				courseQuery.NotificationEnd = notifiyEnd;
 
 				await _db.UpdateAsync(courseQuery);
 			}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KuiVtojHZcT5L5uowwY0rqbRMoIoMQ8c99kftnFruueX+1nPcUBYN66i/8ERh3tTDclAz36bCRxkhnNqj+BMqQ==",
+  "dgSpecHash": "nuxSXudeI4v1f/mdb37xGxxDSaxBWVy6+/VHR21EeBcvzcIKavZSGlts+vHlE2TAGLnO6K4R4i+GwG4w2jt/LA==",
   "success": true,
   "projectFilePath": "D:\\971 Secondary\\C971-Degree-Planner\\DegreePlanner\\DegreePlanner.Android\\DegreePlanner.Android.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Kris\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.3\\sqlitepclraw.lib.e_sqlite3.android.2.0.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Kris\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\xam.plugins.notifier\\3.0.1\\xam.plugins.notifier.3.0.1.nupkg.sha512",

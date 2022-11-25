@@ -23,10 +23,10 @@ namespace DegreePlanner.Views {
         private global::Xamarin.Forms.ToolbarItem CancelAssess;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Picker AssessTermAdd;
+        private global::Xamarin.Forms.Picker TypeAssess;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Picker TypeAssess;
+        private global::Xamarin.Forms.Picker AssessTermAdd;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.DatePicker AddDueDate;
@@ -39,8 +39,8 @@ namespace DegreePlanner.Views {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AssessAdd));
             SaveAsess = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ToolbarItem>(this, "SaveAsess");
             CancelAssess = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ToolbarItem>(this, "CancelAssess");
-            AssessTermAdd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "AssessTermAdd");
             TypeAssess = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "TypeAssess");
+            AssessTermAdd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "AssessTermAdd");
             AddDueDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "AddDueDate");
             NotificationAdd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "NotificationAdd");
         }

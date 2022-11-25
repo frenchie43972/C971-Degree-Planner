@@ -29,8 +29,22 @@ namespace DegreePlanner.Views
 		{
 			Course c = (Course)AssessTermAdd.SelectedItem;
 
-			await DatabaseServices.AddAssess(c.Id, (string)TypeAssess.SelectedItem,
+			if (TypeAssess.SelectedItem == null)
+			{
+				await DisplayAlert("Error!", "Please select an assessment type.", "Ok");
+				return;
+			}
+			else if (AssessTermAdd.SelectedItem == null)
+			{
+				await DisplayAlert("Error!", "Please select a course.", "Ok");
+				return;
+			}
+			else
+			{
+				await DatabaseServices.AddAssess(c.Id, (string)TypeAssess.SelectedItem,
 										AddDueDate.Date, NotificationAdd.IsToggled);
+				await Navigation.PopAsync();
+			}
 		}
 
 		async void CancelAssess_Clicked(object sender, EventArgs e)
