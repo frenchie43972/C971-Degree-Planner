@@ -64,8 +64,6 @@ namespace DegreePlanner.Views
 											DueDate.Date, NotifyEdit.IsToggled);
 				await Navigation.PopAsync();
 			}
-
-			
 		}
 
 		async void CancelEdit_Clicked(object sender, EventArgs e)
