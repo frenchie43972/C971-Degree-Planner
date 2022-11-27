@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,7 +22,6 @@ namespace DegreePlanner.Views
 			InitializeComponent();
 
 			myCourse = selectedCourse;
-
 		}
 
 		protected override async void OnAppearing()
@@ -43,7 +43,6 @@ namespace DegreePlanner.Views
 			NotificationEdit.IsToggled = myCourse.NotificationStart;
 			NotificationEnd.IsToggled = myCourse.NotificationEnd;
 
-
 			foreach (var term in termList)
 			{
 				if (term.Id == myCourse.TermId)
@@ -52,14 +51,10 @@ namespace DegreePlanner.Views
 					break;
 				}
 			}
-
-			
-
 		}
 
 		async void SaveCourse_Clicked(object sender, EventArgs e)
 		{
-			
 			Term t = (Term)TermSelect.SelectedItem;
 
 			if (!validEmail(InstructorEmail.Text) && !IsValidPhoneNumber(InstructorPhone.Text))
@@ -85,6 +80,14 @@ namespace DegreePlanner.Views
 			}
 			else
 			{
+				if (EditNotes.Text != null)
+				{
+					var answer = await DisplayAlert("Please Choose", "Would you like to send a Notification email?", "Yes", "No");
+					if (answer)
+					{
+						await SendEmail("You Have Notes", EditNotes.Text);
+					}
+				}
 				await DatabaseServices.UpdateCourse(Int32.Parse(CourseId.Text), t.Id, CourseName.Text, CourseStatus.SelectedItem.ToString(),
 									DateTime.Parse(CourseStart.Date.ToString()), DateTime.Parse(CourseEnd.Date.ToString()),
 									InstructorName.Text, InstructorEmail.Text, InstructorPhone.Text, EditNotes.Text,
@@ -137,6 +140,29 @@ namespace DegreePlanner.Views
 			var pattern = @"^[\+]?[{1}]?[(]?[2-9]\d{2}[)]?[-\s\.]?[2-9]\d{2}[-\s\.]?[0-9]{4}$";
 			var options = System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnoreCase;
 			return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, pattern, options);
+		}
+
+		public async Task SendEmail(string subject, string body)
+		{
+			try
+			{
+				var message = new EmailMessage
+				{
+					Subject = subject,
+					Body = body,
+					//To = recipients,
+
+				};
+				await Email.ComposeAsync(message);
+			}
+			catch (FeatureNotSupportedException fbsEx)
+			{
+				// Email is not supported on this device
+			}
+			catch (Exception ex)
+			{
+				// Some other exception occurred
+			}
 		}
 
 		private void CourseStart_DateSelected(object sender, DateChangedEventArgs e)

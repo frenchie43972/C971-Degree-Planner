@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DegreePlanner.Models;
 using DegreePlanner.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +18,6 @@ namespace DegreePlanner.Views
 		public CourseAdd()
 		{
 			InitializeComponent();
-			
 		}
 
 		protected override async void OnAppearing()
@@ -25,7 +25,6 @@ namespace DegreePlanner.Views
 			base.OnAppearing();
 			var termList = await DatabaseServices.GetTerm();
 			AddCourseTerm.ItemsSource = (System.Collections.IList)termList;
-
 		}
 
 		async void SaveCourse_Clicked(object sender, EventArgs e)
@@ -56,12 +55,19 @@ namespace DegreePlanner.Views
 			}
 			else
 			{
+				if (CourseNotes.Text != null)
+				{
+					var answer = await DisplayAlert("Please Choose", "Would you like to send a Notification email?", "Yes", "No");
+					if (answer)
+					{
+						await SendEmail("You Have Notes", CourseNotes.Text);
+					}
+				}
 				await DatabaseServices.AddCourse(t.Id, AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
 									AddCourseStart.Date, AddCourseEnd.Date, AddCourseInst.Text, AddInstEmail.Text, AddInstPhone.Text,
 									CourseNotes.Text, NotificationAdd.IsToggled, NotifyEnd.IsToggled);
 				await Navigation.PopAsync();
 			}
-			
 		}
 
 		async void CancelCourse_Clicked(object sender, EventArgs e)
@@ -90,6 +96,27 @@ namespace DegreePlanner.Views
 			var pattern = @"^[\+]?[{1}]?[(]?[2-9]\d{2}[)]?[-\s\.]?[2-9]\d{2}[-\s\.]?[0-9]{4}$";
 			var options = System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnoreCase;
 			return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, pattern, options);
+		}
+
+		public async Task SendEmail(string subject, string body)
+		{
+			try
+			{
+				var message = new EmailMessage
+				{
+					Subject = subject,
+					Body = body,
+				};
+				await Email.ComposeAsync(message);
+			}
+			catch (FeatureNotSupportedException fbsEx)
+			{
+				// Email is not supported on this device
+			}
+			catch (Exception ex)
+			{
+				// Some other exception occurred
+			}
 		}
 
 		public void AddCourseStart_DateSelected(object sender, DateChangedEventArgs e)
