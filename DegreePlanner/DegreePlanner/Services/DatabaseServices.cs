@@ -21,7 +21,7 @@ namespace DegreePlanner.Services
 				return;
 			}
 
-			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term.db");
+			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term01.db");
 
 			_db = new SQLiteAsyncConnection(databasePath);
 

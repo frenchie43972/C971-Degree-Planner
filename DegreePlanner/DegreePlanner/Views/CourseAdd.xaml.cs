@@ -33,19 +33,35 @@ namespace DegreePlanner.Views
 
 			Term t = (Term)AddCourseTerm.SelectedItem;
 
-			if ((AddCourseTerm.SelectedIndex == -1 && AddCourseStatus.SelectedIndex == -1) 
-				&& (AddCourseName.Text == null && AddCourseInst.Text == null))
+			if (!validEmail(AddInstEmail.Text) && !IsValidPhoneNumber(AddInstPhone.Text))
 			{
-				await DisplayAlert("Error!", "All fields except for Notes and Notifications are required.", "Ok");
+				await DisplayAlert("Error!", "Enter a valid phone number.", "Ok");
 				return;
 			}
+			else if (AddCourseTerm.SelectedItem == null)
+			{
+				await DisplayAlert("Error!", "Please select a term.", "Ok");
+				return;
+			}
+			else if (AddCourseStatus.SelectedItem == null)
+			{
+				await DisplayAlert("Error!", "Please select a course status.", "Ok");
+				return;
+			}
+			else if (AddCourseStart.Date > AddCourseEnd.Date)
+			{
+				await DisplayAlert("Error!", "Start date cannot be greater than end date", "Ok");
 
-
-			await DatabaseServices.AddCourse(t.Id, AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
+				return;
+			}
+			else
+			{
+				await DatabaseServices.AddCourse(t.Id, AddCourseName.Text, (string)AddCourseStatus.SelectedItem,
 									AddCourseStart.Date, AddCourseEnd.Date, AddCourseInst.Text, AddInstEmail.Text, AddInstPhone.Text,
 									CourseNotes.Text, NotificationAdd.IsToggled, NotifyEnd.IsToggled);
-			await Navigation.PopAsync();
-
+				await Navigation.PopAsync();
+			}
+			
 		}
 
 		async void CancelCourse_Clicked(object sender, EventArgs e)
@@ -60,7 +76,7 @@ namespace DegreePlanner.Views
 			if (e.IsValid(address))
 				return true;
 			else
-			DisplayAlert("Error!", "Enter a valid phone number.", "Ok");
+			DisplayAlert("Error!", "Enter a valid email address.", "Ok");
 			return false;
 		}
 

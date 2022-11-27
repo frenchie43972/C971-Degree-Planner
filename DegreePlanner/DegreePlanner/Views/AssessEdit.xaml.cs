@@ -48,9 +48,58 @@ namespace DegreePlanner.Views
 		{
 			Course c = (Course)CourseSelect.SelectedItem;
 
-			await DatabaseServices.UpdateAssess(Int32.Parse(AssId.Text), c.Id, AssessType.SelectedItem.ToString(),
+			if (AssessType.SelectedItem == null)
+			{
+				await DisplayAlert("Error!", "Please select an assessment type.", "Ok");
+				return;
+			}
+			else if (CourseSelect.SelectedItem == null)
+			{
+				await DisplayAlert("Error!", "Please select a course.", "Ok");
+				return;
+			}
+
+			var getList = await DatabaseServices.GetAssessment(c.Id);
+			int o = 0;
+			int p = 0;
+
+			foreach (Assessment a in getList)
+			{
+				// Validates Assessment IDs and ignores if they're the same or else you can 
+				// save duplicate assessments
+				if (a.AssessId != a.AssessId)
+				{
+					continue;
+				}
+				else
+				{
+					if (a.TypeAssess == "Objective Assessment")
+					{
+						o++;
+					}
+					if (a.TypeAssess == "Performance Assessment")
+					{
+						p++;
+					}
+				}
+			}
+
+			if (AssessType.SelectedItem.ToString() == "Objective Assessment" && o > 0)
+			{
+				await DisplayAlert("Error!", "You may only have one Objective Assessment for this course.", "Ok");
+				return;
+			}
+			if (AssessType.SelectedItem.ToString() == "Performance Assessment" && p > 0)
+			{
+				await DisplayAlert("Error!", "You may only have one Performance Assessment for this course.", "Ok");
+				return;
+			}
+			else
+			{
+				await DatabaseServices.UpdateAssess(Int32.Parse(AssId.Text), c.Id, AssessType.SelectedItem.ToString(),
 											DueDate.Date, NotifyEdit.IsToggled);
-			await Navigation.PopAsync();
+				await Navigation.PopAsync();
+			}
 		}
 
 		async void CancelEdit_Clicked(object sender, EventArgs e)
