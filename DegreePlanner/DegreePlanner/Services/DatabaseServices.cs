@@ -226,5 +226,66 @@ namespace DegreePlanner.Services
 
 		#endregion
 
+		#region Demo Data
+		public static async void LoadSampleData()
+		{
+			await Init();
+
+
+			Term term = new Term
+			{
+				TermName = "Winter Term",
+				TermStart = new DateTime(12, 05, 2022),
+				TermEnd = new DateTime(05, 05, 2022),
+			};
+			await _db.InsertAsync(term);
+
+			Course course1 = new Course
+			{
+				TermId = term.Id,
+				CourseName = "Winter Course",
+				CourseStatus = "in Progress",
+				CourseStart = new DateTime(12, 05, 2022),
+				CourseEnd = new DateTime(01, 23, 2023),
+				InstName = "Kris French",
+				InstEmail = "kfren51@wgu.edu",
+				InstPhone = "360-969-0322",
+				Notes = " ",
+				NotificationStart = false,
+				NotificationEnd = false,
+			};
+			await _db.InsertAsync(course1);
+
+			Assessment assessPA = new Assessment
+			{
+				CourseId = course1.Id,
+				TypeAssess = "Performance Assessment",
+				AssessDueDate = new DateTime(01, 23, 2023),
+				Notifications = false,
+			};
+			await _db.InsertAsync(assessPA);
+
+			Assessment assessOA = new Assessment
+			{
+				CourseId = course1.Id,
+				TypeAssess = "Objective Assessment",
+				AssessDueDate = new DateTime(12, 23, 2022),
+				Notifications = false,
+			};
+			await _db.InsertAsync(assessOA);
+
+		}
+
+		public static async void ClearSampleData()
+		{
+
+		}
+
+		public static async void LoadSampleDataSQL()
+		{
+
+		}
+		#endregion
+
 	}
 }
