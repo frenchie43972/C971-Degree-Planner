@@ -2,6 +2,8 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
+using DegreePlanner.Services;
 
 namespace DegreePlanner
 {
@@ -10,6 +12,12 @@ namespace DegreePlanner
 		public App()
 		{
 			InitializeComponent();
+
+			if (Settings.FirstRun)
+			{
+				DatabaseServices.LoadSampleData();
+				Settings.FirstRun = false;
+			}
 
 			var landingPage = new LandingPage();
 			var navPage = new NavigationPage(landingPage);

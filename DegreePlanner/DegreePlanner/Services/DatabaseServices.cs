@@ -235,8 +235,8 @@ namespace DegreePlanner.Services
 			Term term = new Term
 			{
 				TermName = "Winter Term",
-				TermStart = new DateTime(12, 05, 2022),
-				TermEnd = new DateTime(05, 05, 2022),
+				TermStart = new DateTime(2022, 12, 05),
+				TermEnd = new DateTime(2023, 05, 05),
 			};
 			await _db.InsertAsync(term);
 
@@ -244,9 +244,9 @@ namespace DegreePlanner.Services
 			{
 				TermId = term.Id,
 				CourseName = "Winter Course",
-				CourseStatus = "in Progress",
-				CourseStart = new DateTime(12, 05, 2022),
-				CourseEnd = new DateTime(01, 23, 2023),
+				CourseStatus = "In Progress",
+				CourseStart = new DateTime(2022, 12, 05),
+				CourseEnd = new DateTime(2023, 01, 23),
 				InstName = "Kris French",
 				InstEmail = "kfren51@wgu.edu",
 				InstPhone = "360-969-0322",
@@ -260,7 +260,7 @@ namespace DegreePlanner.Services
 			{
 				CourseId = course1.Id,
 				TypeAssess = "Performance Assessment",
-				AssessDueDate = new DateTime(01, 23, 2023),
+				AssessDueDate = new DateTime(2023, 01, 23),
 				Notifications = false,
 			};
 			await _db.InsertAsync(assessPA);
@@ -278,13 +278,19 @@ namespace DegreePlanner.Services
 
 		public static async void ClearSampleData()
 		{
+			await Init();
 
+			await _db.DropTableAsync<Term>();
+			await _db.DropTableAsync<Course>();
+			await _db.DropTableAsync<Assessment>();
+
+			_db = null;
 		}
 
-		public static async void LoadSampleDataSQL()
-		{
+		//public static async void LoadSampleDataSQL()
+		//{
 
-		}
+		//}
 		#endregion
 
 	}

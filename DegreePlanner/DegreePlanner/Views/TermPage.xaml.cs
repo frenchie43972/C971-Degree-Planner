@@ -22,6 +22,7 @@ namespace DegreePlanner.Views
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
+			
 			TermCollectionView.ItemsSource = await DatabaseServices.GetTerm();
 		}
 
