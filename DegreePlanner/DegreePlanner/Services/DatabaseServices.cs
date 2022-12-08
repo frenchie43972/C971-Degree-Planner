@@ -21,7 +21,7 @@ namespace DegreePlanner.Services
 				return;
 			}
 
-			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term01.db");
+			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term03.db");
 
 			_db = new SQLiteAsyncConnection(databasePath);
 
@@ -224,6 +224,82 @@ namespace DegreePlanner.Services
 			}
 		}
 
+		#endregion
+
+		#region Demo Data
+		public static async Task LoadSampleData()
+		{
+			await Init();
+
+			var terms = await _db.Table<Term>().ToListAsync();
+			var courses = await _db.Table<Course>().ToListAsync();
+			var assessments = await _db.Table<Assessment>().ToListAsync();
+
+
+			if (terms.Count > 0 || courses.Count > 0 || assessments.Count > 0)
+			{
+				return;
+			}
+
+			Term term = new Term
+			{
+				TermName = "Winter Term",
+				TermStart = new DateTime(2022, 12, 05),
+				TermEnd = new DateTime(2023, 05, 05),
+			};
+			await _db.InsertAsync(term);
+
+			Course course1 = new Course
+			{
+				TermId = term.Id,
+				CourseName = "Winter Course",
+				CourseStatus = "In Progress",
+				CourseStart = new DateTime(2022, 12, 05),
+				CourseEnd = new DateTime(2023, 01, 23),
+				InstName = "Kris French",
+				InstEmail = "kfren51@wgu.edu",
+				InstPhone = "360-969-0322",
+				Notes = " ",
+				NotificationStart = false,
+				NotificationEnd = false,
+			};
+			await _db.InsertAsync(course1);
+
+			Assessment assessPA = new Assessment
+			{
+				CourseId = course1.Id,
+				TypeAssess = "Performance Assessment",
+				AssessDueDate = new DateTime(2023, 01, 23),
+				Notifications = false,
+			};
+			await _db.InsertAsync(assessPA);
+
+			Assessment assessOA = new Assessment
+			{
+				CourseId = course1.Id,
+				TypeAssess = "Objective Assessment",
+				AssessDueDate = new DateTime(2022, 12, 23),
+				Notifications = false,
+			};
+			await _db.InsertAsync(assessOA);
+
+		}
+
+		public static async void ClearSampleData()
+		{
+			await Init();
+
+			await _db.DropTableAsync<Term>();
+			await _db.DropTableAsync<Course>();
+			await _db.DropTableAsync<Assessment>();
+
+			_db = null;
+		}
+
+		//public static async void LoadSampleDataSQL()
+		//{
+
+		//}
 		#endregion
 
 	}
