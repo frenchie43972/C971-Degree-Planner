@@ -13,12 +13,6 @@ namespace DegreePlanner
 		{
 			InitializeComponent();
 
-			if (Settings.FirstRun)
-			{
-				DatabaseServices.LoadSampleData();
-				Settings.FirstRun = false;
-			}
-
 			var landingPage = new LandingPage();
 			var navPage = new NavigationPage(landingPage);
 			MainPage = navPage;

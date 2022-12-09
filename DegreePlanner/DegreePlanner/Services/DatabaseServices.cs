@@ -21,7 +21,7 @@ namespace DegreePlanner.Services
 				return;
 			}
 
-			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term01.db");
+			var databasePath = Path.Combine(FileSystem.AppDataDirectory, "Term03.db");
 
 			_db = new SQLiteAsyncConnection(databasePath);
 
@@ -227,10 +227,19 @@ namespace DegreePlanner.Services
 		#endregion
 
 		#region Demo Data
-		public static async void LoadSampleData()
+		public static async Task LoadSampleData()
 		{
 			await Init();
 
+			var terms = await _db.Table<Term>().ToListAsync();
+			var courses = await _db.Table<Course>().ToListAsync();
+			var assessments = await _db.Table<Assessment>().ToListAsync();
+
+
+			if (terms.Count > 0 || courses.Count > 0 || assessments.Count > 0)
+			{
+				return;
+			}
 
 			Term term = new Term
 			{
@@ -269,7 +278,7 @@ namespace DegreePlanner.Services
 			{
 				CourseId = course1.Id,
 				TypeAssess = "Objective Assessment",
-				AssessDueDate = new DateTime(12, 23, 2022),
+				AssessDueDate = new DateTime(2022, 12, 23),
 				Notifications = false,
 			};
 			await _db.InsertAsync(assessOA);
@@ -287,10 +296,6 @@ namespace DegreePlanner.Services
 			_db = null;
 		}
 
-		//public static async void LoadSampleDataSQL()
-		//{
-
-		//}
 		#endregion
 
 	}

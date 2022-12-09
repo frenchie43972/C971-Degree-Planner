@@ -19,7 +19,8 @@ namespace DegreePlanner.Views
 		{
 			base.OnAppearing();
 
-			var termList = await DatabaseServices.GetTerm();
+			await DatabaseServices.LoadSampleData();
+
 			var courseList = await DatabaseServices.GetCourse();
 			var assessList = await DatabaseServices.GetAssessment();
 

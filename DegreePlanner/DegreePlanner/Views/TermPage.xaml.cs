@@ -23,12 +23,6 @@ namespace DegreePlanner.Views
 		{
 			base.OnAppearing();
 
-			//if (Settings.FirstRun)
-			//{
-			//	DatabaseServices.LoadSampleData();
-			//	Settings.FirstRun = false;
-			//}
-
 			TermCollectionView.ItemsSource = await DatabaseServices.GetTerm();
 		}
 
