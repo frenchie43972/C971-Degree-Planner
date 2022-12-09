@@ -22,7 +22,13 @@ namespace DegreePlanner.Views
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
-			
+
+			//if (Settings.FirstRun)
+			//{
+			//	DatabaseServices.LoadSampleData();
+			//	Settings.FirstRun = false;
+			//}
+
 			TermCollectionView.ItemsSource = await DatabaseServices.GetTerm();
 		}
 
