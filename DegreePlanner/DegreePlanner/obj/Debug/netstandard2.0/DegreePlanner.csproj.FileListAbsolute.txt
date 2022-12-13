@@ -109,3 +109,4 @@ D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netst
 D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\XamlC.stamp
 D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\ref\DegreePlanner.dll
 D:\971 Secondary\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\DegreePlanner.csproj.AssemblyReference.cache
+C:\Code Projects\C971-Degree-Planner\DegreePlanner\DegreePlanner\obj\Debug\netstandard2.0\Views\CourseTermCheck.xaml.g.cs

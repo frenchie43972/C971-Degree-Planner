@@ -39,8 +39,8 @@
 				<Label Grid.Row="3" Grid.Column="0" FontSize="Medium" VerticalTextAlignment="Center">End Date</Label>
 				<DatePicker DateSelected="TermEnd_DateSelected" x:Name="TermEnd" Grid.Row="3" Grid.Column="1"/>
 			</Grid>
-			
-        </StackLayout>
+			<Button Text="Click to Check Course Related to the Term" x:Name="CheckCourse" Clicked="CheckCourse_Clicked" VerticalOptions="EndAndExpand"/>
+		</StackLayout>
     </ContentPage.Content>
 	
 </ContentPage>

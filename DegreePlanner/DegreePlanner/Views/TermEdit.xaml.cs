@@ -68,7 +68,11 @@ namespace DegreePlanner.Views
 			{
 				return;
 			}
-			
+		}
+
+		async void CheckCourse_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new CourseTermCheck());
 		}
 
 		private void TermStart_DateSelected(object sender, DateChangedEventArgs e)
