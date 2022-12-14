@@ -68,7 +68,18 @@ namespace DegreePlanner.Views
 			{
 				return;
 			}
+		}
+
+		async void CheckCourse_Clicked(object sender, EventArgs e)
+		{
+			var termID = TermId.Text;
+
+			var courses = await DatabaseServices.GetCourse(int.Parse(termID));
+
+			string courseName = string.Join(", ", courses.Select(c => c.CourseName));
+
 			
+			await DisplayAlert("Courses", courseName, "Ok");
 		}
 
 		private void TermStart_DateSelected(object sender, DateChangedEventArgs e)
