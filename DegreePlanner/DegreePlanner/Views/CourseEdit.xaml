@@ -77,6 +77,7 @@
 				<Switch x:Name="NotificationEnd" Grid.Row="11" Grid.Column="1" />
 
 			</Grid>
+			<Button Text="Click to Check Assessments Related to the Course" x:Name="CheckAss" Clicked="CheckAss_Clicked" VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

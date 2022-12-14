@@ -165,6 +165,18 @@ namespace DegreePlanner.Views
 			}
 		}
 
+		public async void CheckAss_Clicked(object sender, EventArgs e)
+		{
+			var courseID = CourseId.Text;
+
+			var assess = await DatabaseServices.GetAssessment(int.Parse(courseID));
+
+			string assessName = string.Join(", ", assess.Select(c => c.TypeAssess));
+
+
+			await DisplayAlert("Assessments", assessName, "Ok");
+		}
+
 		private void CourseStart_DateSelected(object sender, DateChangedEventArgs e)
 		{
 
@@ -174,5 +186,7 @@ namespace DegreePlanner.Views
 		{
 
 		}
+
+		
 	}
 }
